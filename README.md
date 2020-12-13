@@ -51,7 +51,7 @@ Go inside every services and follow the steps below:
 - edit POSTGRES_PASSWORD in .env with right password
 
 - edit db information (username, database, host, port) for dev and test env in src/config/database.js
-- run 'npm run create_db' and 'npm run create_db_test' to create 2 databases for the first time.
+- run 'npm run create_db' and 'npm run create_db_test' (will prompt a password) to create 2 databases for the first time.
 
 - run 'npm run migration.migrate'
 
