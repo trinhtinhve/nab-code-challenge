@@ -4,7 +4,7 @@ module.exports = {
   development: {
     username: 'postgres',
     password: process.env.POSTGRES_PASSWORD,
-    database: 'product_log_service',
+    database: 'log_service',
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres',
@@ -21,7 +21,7 @@ module.exports = {
   test: {
     username: 'postgres',
     password: process.env.POSTGRES_PASSWORD,
-    database: 'product_log_service',
+    database: 'log_service',
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres',
