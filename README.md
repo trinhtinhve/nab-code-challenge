@@ -59,7 +59,7 @@ Go inside every services and follow the steps below:
 
 - start app: 'npm start'
 
-- test app: 'npm run test'
+- test app: 'npm test'
 
 Note: need to start services with order:
 - log-service
@@ -67,7 +67,33 @@ Note: need to start services with order:
 - product-service
 - order-service
 
-## Postman
+## Curl
+curl --location --request GET 'localhost:4000/product_service/api/v1/products?isActive=true&ids[]=1&ids[]=2'
+
+response: 
+{
+    "count": 2,
+    "rows": [
+        {
+            "quantity": 10,
+            "id": 1,
+            "name": "product-A",
+            "price": 1000,
+            "active": true,
+            "createdAt": "2020-12-13T05:44:29.468Z",
+            "updatedAt": "2020-12-13T05:44:29.468Z"
+        },
+        {
+            "quantity": 20,
+            "id": 2,
+            "name": "product-B",
+            "price": 2000,
+            "active": true,
+            "createdAt": "2020-12-13T05:44:29.468Z",
+            "updatedAt": "2020-12-13T05:44:29.468Z"
+        }
+    ]
+}
 
 ## Assumption
 - We should push logs into a message broker like kafka, rabbitmq or sqs and have a worker to consume the relevant logs instead of use REST API, because the number requests/s are usually high frequency and it's async operations.
