@@ -55,7 +55,7 @@ Go inside every services and follow the steps below:
 
 - run 'npm run migration.migrate'
 
-- run 'npm run migration.seed'
+- run 'npm run migration.seed' (if there are seed files in seed folder)
 
 - start app: 'npm start'
 
